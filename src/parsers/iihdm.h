@@ -9,7 +9,7 @@
 typedef struct {
 	nmea_s base;
 	double heading_mag;
-} nmea_<type>_s;
+} nmea_iihdm_s;
 
 /* Value indexes */
 #define NMEA_IIHDM_HEADING_MAG	0

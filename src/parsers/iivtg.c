@@ -45,11 +45,11 @@ parse(nmea_parser_s *parser, char *value, int val_index)
 	nmea_iivtg_s *data = (nmea_iivtg_s *) parser->data;
 
 	switch (val_index) {
-	case NMEA_IIVTG_TRACKMADEGOOO_TRUE:
+	case NMEA_IIVTG_TRACKMADEGOOD_TRUE:
                 data->trackmadegood_true = strtod(value, NULL);
 		break;
 
-	case NMEA_IIVTG_TRACKMADEGOOO_MAGNETIC:
+	case NMEA_IIVTG_TRACKMADEGOOD_MAGNETIC:
                 data->trackmadegood_mag = strtod(value, NULL);
                 break;	
 

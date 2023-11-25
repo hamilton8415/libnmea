@@ -14,7 +14,7 @@ typedef struct {
 	double speed_kph;
         char mode;	
 	/* sentence values */
-} nmea_<type>_s;
+} nmea_iivtg_s;
 
 /* Value indexes */
 #define NMEA_IIVTG_TRACKMADEGOOD_TRUE	0

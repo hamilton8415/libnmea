@@ -9,7 +9,7 @@
 typedef struct {
 	nmea_s base;
 	double heading_true;
-} nmea_<type>_s;
+} nmea_iihdt_s;
 
 /* Value indexes */
 #define NMEA_IIHDT_HEADING_TRUE	0
