@@ -14,7 +14,10 @@ typedef enum {
 	NMEA_GPGSV,
 	NMEA_GPRMC,
 	NMEA_GPTXT,
-	NMEA_GPVTG
+	NMEA_GPVTG,
+	NMEA_IIGLL,
+	NMEA_IIHDT,
+	NMEA_IIHDM
 } nmea_t;
 
 /* NMEA cardinal direction types */

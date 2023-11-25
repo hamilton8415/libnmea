@@ -41,6 +41,15 @@ DECLARE_PARSER_API(gptxt)
 #ifdef ENABLE_GPVTG
 DECLARE_PARSER_API(gpvtg)
 #endif
+#ifdef ENABLE_IIGLL
+DECLARE_PARSER_API(iigll)
+#endif
+#ifdef ENABLE_IIHDT
+DECLARE_PARSER_API(iihdt)
+#endif
+#ifdef ENABLE_IIHDM
+DECLARE_PARSER_API(iihdm)
+#endif
 
 nmea_parser_module_s parsers[PARSER_COUNT];
 
@@ -77,6 +86,15 @@ nmea_load_parsers()
 #endif
 #ifdef ENABLE_GPVTG
 	PARSER_LOAD(gpvtg);
+#endif
+#ifdef ENABLE_IIGLL
+	PARSER_LOAD(iigll);
+#endif
+#ifdef ENABLE_IIHDT
+	PARSER_LOAD(iihdt);
+#endif
+#ifdef ENABLE_IIHDM
+	PARSER_LOAD(iihdm);
 #endif
 
 	return PARSER_COUNT;
