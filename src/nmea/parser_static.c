@@ -50,6 +50,9 @@ DECLARE_PARSER_API(iihdt)
 #ifdef ENABLE_IIHDM
 DECLARE_PARSER_API(iihdm)
 #endif
+#ifdef ENABLE_IIMWV
+DECLARE_PARSER_API(iimwv)
+#endif
 
 nmea_parser_module_s parsers[PARSER_COUNT];
 
@@ -95,6 +98,9 @@ nmea_load_parsers()
 #endif
 #ifdef ENABLE_IIHDM
 	PARSER_LOAD(iihdm);
+#endif
+#ifdef ENABLE_IIMWV
+	PARSER_LOAD(iimwv);
 #endif
 
 	return PARSER_COUNT;
