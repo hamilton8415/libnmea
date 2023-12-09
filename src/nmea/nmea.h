@@ -19,6 +19,7 @@ typedef enum {
 	NMEA_IIHDT,
 	NMEA_IIHDM,
 	NMEA_IIVTG,
+	NMEA_IIVHW,
 	NMEA_IIMWV
 } nmea_t;
 
