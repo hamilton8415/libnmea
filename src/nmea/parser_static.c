@@ -41,9 +41,6 @@ DECLARE_PARSER_API(gptxt)
 #ifdef ENABLE_GPVTG
 DECLARE_PARSER_API(gpvtg)
 #endif
-#ifdef ENABLE_IIGLL
-DECLARE_PARSER_API(iigll)
-#endif
 #ifdef ENABLE_IIHDT
 DECLARE_PARSER_API(iihdt)
 #endif
@@ -52,6 +49,18 @@ DECLARE_PARSER_API(iihdm)
 #endif
 #ifdef ENABLE_IIMWV
 DECLARE_PARSER_API(iimwv)
+#endif
+#ifdef ENABLE_IIVHW
+DECLARE_PARSER_API(iivhw)
+#endif
+#ifdef ENABLE_IIVPW
+DECLARE_PARSER_API(iivpw)
+#endif
+#ifdef ENABLE_IIVWR
+DECLARE_PARSER_API(iivwr)
+#endif
+#ifdef ENABLE_IIVWT
+DECLARE_PARSER_API(iivwt)
 #endif
 
 nmea_parser_module_s parsers[PARSER_COUNT];
@@ -90,9 +99,6 @@ nmea_load_parsers()
 #ifdef ENABLE_GPVTG
 	PARSER_LOAD(gpvtg);
 #endif
-#ifdef ENABLE_IIGLL
-	PARSER_LOAD(iigll);
-#endif
 #ifdef ENABLE_IIHDT
 	PARSER_LOAD(iihdt);
 #endif
@@ -101,6 +107,18 @@ nmea_load_parsers()
 #endif
 #ifdef ENABLE_IIMWV
 	PARSER_LOAD(iimwv);
+#endif
+#ifdef ENABLE_IIVHW
+	PARSER_LOAD(iivhw);
+#endif
+#ifdef ENABLE_IIVPW
+	PARSER_LOAD(iivpw);
+#endif
+#ifdef ENABLE_IIVWR
+	PARSER_LOAD(iivwr);
+#endif
+#ifdef ENABLE_IIVWT
+	PARSER_LOAD(iivwt);
 #endif
 
 	return PARSER_COUNT;

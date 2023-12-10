@@ -40,13 +40,13 @@ int
 parse(nmea_parser_s *parser, char *value, int val_index)
 {
 	nmea_iimwv_s *data = (nmea_iimwv_s *) parser->data;
-
+        
 	switch (val_index) {
 	case NMEA_IIMWV_WINDHEADING:
                 data->wind_heading = strtod(value, NULL);
 		break;
 	case NMEA_IIMWV_RELORTRUE:
-                data->wind_heading = *value;
+                data->rel_true = *value;
 		break;
 	case NMEA_IIMWV_WINDSPEED:
                 data->wind_speed = strtod(value, NULL);
