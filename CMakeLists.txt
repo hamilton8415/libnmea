@@ -26,7 +26,7 @@ foreach(p LIB BIN INCLUDE CMAKE)
   endif()
 endforeach()
 
-option(NMEA_BUILD_STATIC_LIB "Build static libnmea" ON)
+option(NMEA_BUILD_STATIC_LIB "Build static libnmea" OFF)
 option(NMEA_BUILD_SHARED_LIB "Build shared libnmea" ON)
 option(NMEA_BUILD_EXAMPLES "Build examples" ON)
 option(NMEA_EXAMPLES_LINK_STATIC "Link examples statically" ON)

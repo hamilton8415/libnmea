@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 #include "nmea.h"
 #include "parser.h"
 #include "parser_types.h"
@@ -217,38 +219,44 @@ nmea_parse(char *sentence, size_t length, int check_checksum)
 	char *values[255];
 	nmea_parser_module_s *parser;
 	nmea_t type;
-
+  
 	/* Validate sentence string */
 	if (-1 == nmea_validate(sentence, length, check_checksum)) {
+//	        printf("nmea_validata == -1\n");
 		return (nmea_s *) NULL;
 	}
 
 	type = nmea_get_type(sentence);
 	if (NMEA_UNKNOWN == type) {
+//	        printf("NMEA_UNKNOWN\n");
 		return (nmea_s *) NULL;
 	}
 
 	/* Crop sentence from type word and checksum */
 	val_string = _crop_sentence(sentence, length);
 	if (NULL == val_string) {
+//	        printf("val_string \n");
 		return (nmea_s *) NULL;
 	}
 
 	/* Split the sentence into values */
 	n_vals = _split_string_by_comma(val_string, values, ARRAY_LENGTH(values));
 	if (0 == n_vals) {
+//	        printf("n_vals == 0 \n");
 		return (nmea_s *) NULL;
 	}
 
 	/* Get the right parser */
 	parser = nmea_get_parser_by_type(type);
 	if (NULL == parser) {
+//	        printf("parser == NULL \n");
 		return (nmea_s *) NULL;
 	}
 
 	/* Allocate memory for parsed data */
 	parser->allocate_data((nmea_parser_s *) parser);
 	if (NULL == parser->parser.data) {
+//	        printf("parser->parser.data == NULL \n");
 		return (nmea_s *) NULL;
 	}
 
