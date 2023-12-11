@@ -62,6 +62,15 @@ DECLARE_PARSER_API(iivwr)
 #ifdef ENABLE_IIVWT
 DECLARE_PARSER_API(iivwt)
 #endif
+#ifdef ENABLE_IIVDR
+DECLARE_PARSER_API(iivdr)
+#endif
+#ifdef ENABLE_IIMWD
+DECLARE_PARSER_API(iimwd)
+#endif
+#ifdef ENABLE_PGRME
+DECLARE_PARSER_API(pgrme)
+#endif
 
 nmea_parser_module_s parsers[PARSER_COUNT];
 
@@ -119,6 +128,15 @@ nmea_load_parsers()
 #endif
 #ifdef ENABLE_IIVWT
 	PARSER_LOAD(iivwt);
+#endif
+#ifdef ENABLE_IIVDR
+	PARSER_LOAD(iivdr);
+#endif
+#ifdef ENABLE_IIMWD
+	PARSER_LOAD(iimwd);
+#endif
+#ifdef ENABLE_PGRME
+	PARSER_LOAD(pgrme);
 #endif
 
 	return PARSER_COUNT;
